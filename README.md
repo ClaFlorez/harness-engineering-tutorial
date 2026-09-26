@@ -21,15 +21,13 @@ El artículo de [OpenAI sobre Harness Engineering](https://openai.com/index/harn
 
 Una prueba en verde aporta evidencia limitada a lo que comprueba. No demuestra que un agente sea confiable para cualquier tarea.
 
-```mermaid
-flowchart LR
-    A[Persona define objetivo] --> B[Agente lee contexto]
-    B --> C[Agente modifica código]
-    C --> D[Ejecuta verificaciones]
-    D --> E{Cumple criterios}
-    E -->|No| B
-    E -->|Sí| F[Persona revisa evidencia y cambios]
-```
+El ciclo de trabajo:
+
+1. La persona define el objetivo y los criterios de aceptación.
+2. El agente lee el contexto del proyecto.
+3. El agente modifica el código y ejecuta las verificaciones.
+4. Si no cumple los criterios, revisa el contexto, corrige y vuelve a verificar.
+5. Cuando cumple los criterios, la persona revisa la evidencia y los cambios.
 
 ## 2. Preparación y primera ejecución · 15 minutos
 
